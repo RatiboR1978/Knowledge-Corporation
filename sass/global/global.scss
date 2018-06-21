@@ -1,0 +1,38 @@
+html {
+  font-size: 12px;
+}
+
+body {
+  position: relative;
+  font-family: DINPro, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h4 {
+  font-family: DINPro-Bold,  Arial, sans-serif;
+}
+
+.container {
+  max-width: 1784px;
+  padding-left: 137px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}

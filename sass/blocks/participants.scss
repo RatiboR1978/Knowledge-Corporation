@@ -1,0 +1,134 @@
+.participants {
+  margin-bottom: 100px;
+
+  h2 {
+    font-size: 3.3333rem;
+    margin-bottom: 39px;
+  }
+
+  &__sort-filters {
+    margin-bottom: 37px;
+
+    button {
+      padding: 0;
+      background: none;
+      border: none;
+      outline: none;
+      position: relative;
+      color: $accent-color;
+      margin-right: 29px;
+      cursor: pointer;
+      font-size: 1.166rem;
+    }
+
+    button:last-child {
+      margin-right: 0;
+    }
+
+    button::before {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accent-color;
+    }
+  }
+
+  &__item-text-wrap {
+    padding-left: 5px;
+  }
+
+  &__item {
+    width: 284px;
+    justify-content: flex-start;
+    margin-bottom: 55px;
+    margin-right: 91px;
+  }
+
+  &__item-text {
+    margin-left: 11px;
+    max-width: 207px;
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  &__item-but {
+    padding: 6px 20px;
+    border: 1px solid $accent-color;
+    color: $accent-color;
+    background: none;
+    outline: none;
+    border-radius: 16px;
+    font-family: DINPro-Bold, Arial, sans-serif;
+    font-size: 1.16rem;
+    cursor: pointer;
+  }
+
+  &__position-links {
+    a {
+      color: $accent-color;
+      position: relative;
+    }
+
+    a::before {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accent-color;
+    }
+  }
+
+  &__list {
+    max-width: 1540px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 14px;
+  }
+
+  &__item-photo-gag {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    position: relative;
+  }
+
+  &__item-photo-gag:before {
+    position: absolute;
+    content: 'И.А.';
+    color: #cccccc;
+    top: 50%;
+    left: 50%;
+    margin-top: -6px;
+    margin-left: -9px;
+  }
+
+  &__block-but {
+    max-width: 224px;
+    font-size: 18px;
+    button {
+      padding: 14px 39px;
+      border-radius: 30px;
+      border: 1px solid $accent-color;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &__registration {
+    background-color: $accent-color;
+    color: white;
+    margin-bottom: 38px;
+  }
+
+  &__show {
+    background-color: white;
+    color: $accent-color;
+  }
+}

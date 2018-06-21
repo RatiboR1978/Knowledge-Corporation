@@ -1,0 +1,103 @@
+.description {
+  padding-top: 45px;
+  margin-bottom: 93px;
+
+  &__information {
+    justify-content: flex-start;
+  }
+
+  &__block-text {
+    max-width: 780px;
+    p {
+      font-size: 2rem;
+      line-height: 36px;
+    }
+  }
+
+  &__first-paragraph {
+    margin-bottom: 37px;
+  }
+
+  &__title {
+    max-width: 480px;
+    font-size: 4.1666rem;
+    line-height: 59px;
+    margin-top: 24px;
+  }
+  
+  &__tagcloud {
+    padding-top: 25px;
+    margin-bottom: 35px;
+    a {
+      background-color: #ececec;
+      color: $explanation-color;
+      border-radius: 2px;
+      padding: 7px 10px;
+      margin-right: 4px;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__classifiers,
+  &__competencies {
+    h4 {
+      margin-bottom: 6px;
+    }
+
+    a {
+      position: relative;
+      color: $explanation-color;
+      margin-right: 10px;
+      line-height: 24px;
+    }
+    a::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $explanation-color;
+    }
+    a:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__classifiers {
+    margin-bottom: 21px;
+  }
+
+  &__edit {
+    padding-left: 33px;
+    padding-top: 29px;
+    a {
+      color: $accent-color;
+      font-size: 1.16rem;
+      position: relative;
+      border-bottom: 1px dotted $accent-color;
+    }
+    a:before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 19px;
+      background-image: url(../img/sprite.jpg);
+      background-position: -0px -130px;
+      top: 0;
+      left: -32px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 606px;
+    }
+  }
+}
