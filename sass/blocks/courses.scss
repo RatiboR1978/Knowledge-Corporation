@@ -1,0 +1,101 @@
+.courses {
+  margin-bottom: 106px;
+
+  h2 {
+    font-size: 3.3333rem;
+    margin-bottom: 52px;
+  }
+
+  &__list {
+    margin-bottom: 78px;
+  }
+
+  &__item {
+    position: relative;
+    max-width: 750px;
+    box-shadow: 0 1px 10px 2px #dddddd;
+    padding: 28px 0 22px 30px;
+    margin-bottom: 20px;
+    h3 {
+      margin-top: 7px;
+      margin-bottom: 8px;
+      font-family: DINPro-Bold, Arial, sans-serif;
+      font-size: 1.3333rem;
+      line-height: 23px;
+      a {
+        color: black;
+      }
+      span {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      color: $explanation-color;
+      position: relative;
+      line-height: 24px;
+      margin-right: 15px;
+      span {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+
+  &__statistics {
+    display: flex;
+    p {
+      padding-right: 24px;
+      font-size: 1.1666rem;
+
+    }
+  }
+
+  &__heart {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    background-image: url(../img/sprite.png);
+    background-position: -38px -44px;
+    width: 19px;
+    height: 16px;
+    top: 0;
+    left: 0;
+  }
+
+  &__like {
+    padding-left: 20px;
+    position: relative;
+  }
+
+  &__triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 60px solid $accent-color;
+    border-left: 60px solid transparent;
+    top: 0;
+    right: 0;
+    span {
+      position: relative;
+    }
+    span:before {
+      position: absolute;
+      content: '';
+      background-image: url(../img/star.png);
+      width: 18px;
+      height: 17px;
+      top: -50px;
+      left: -25px;
+    }
+  }
+
+  &__but {
+    font-size: 1.5rem;
+    color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 28px;
+    padding: 12px 40px;
+  }
+}
