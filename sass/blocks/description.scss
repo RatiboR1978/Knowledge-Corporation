@@ -3,14 +3,22 @@
   margin-bottom: 93px;
 
   &__information {
+    flex-wrap: wrap;
     justify-content: flex-start;
+    @media (min-width: 1280px) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__block-text {
     max-width: 780px;
     p {
-      font-size: 2rem;
-      line-height: 36px;
+      font-size: 1.5rem;
+      line-height: 25px;
+      @media (min-width: 810px) {
+        font-size: 2rem;
+        line-height: 36px;
+      }
     }
   }
 
@@ -20,20 +28,27 @@
 
   &__title {
     max-width: 480px;
-    font-size: 4.1666rem;
-    line-height: 59px;
+    font-size: 2.333rem;
+    line-height: 36px;
     margin-top: 24px;
+    @media (min-width: 810px) {
+      font-size: 4.1666rem;
+      line-height: 59px;
+    }
   }
   
   &__tagcloud {
+    display: flex;
+    flex-wrap: wrap;
     padding-top: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     a {
       background-color: #ececec;
       color: $explanation-color;
       border-radius: 2px;
       padding: 7px 10px;
       margin-right: 4px;
+      margin-bottom: 10px;
     }
     a:last-child {
       margin-right: 0;
@@ -91,13 +106,60 @@
     }
   }
 
+  &__slides-wrap {
+    @media (min-width: 1280px) {
+      margin-top: 158px;
+      margin-left: 11%;
+      margin-right: 2%;
+    }
+  }
+
   &__slider {
-    position: relative;
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
+    max-width: 280px;
+    @media (min-width: 570px) {
+      max-width: 506px;
+    }
+    @media (min-width: 680px) {
       max-width: 606px;
     }
+  }
+
+  &__slide-wrap {
+    position: relative;
+  }
+
+  &__slider-text {
+    max-width: 420px;
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    a {
+      font-family: DINPro-Bold, Arial, sans-serif;
+      font-size: 1.5rem;
+      color: white;
+      line-height: 25px;
+      @media (min-width: 680px) {
+        line-height: 36px;
+        font-size: 2rem;
+      }
+      span {
+        border-bottom: 1px solid white;
+      }
+    }
+
+    p {
+      max-width: 300px;
+      font-size: 1.2rem;
+      color: white;
+      line-height: 25px;
+      @media (min-width: 680px) {
+        line-height: 25px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__links {
+    max-width: 755px;
   }
 }

@@ -22,8 +22,11 @@ h4 {
 
 .container {
   max-width: 1784px;
-  padding-left: 137px;
   margin: 0 auto;
+  padding-left: 5%;
+  @media (min-width: 946px) {
+    padding-left: 7%;
+  }
 }
 
 .clearfix:after {

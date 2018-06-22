@@ -1,3 +1,49 @@
 .footer {
-  padding-top: 70px;
+  padding-top: 50px;
+  ul {
+    padding: 0;
+    li {
+      list-style-type: none;
+      span {
+        color: $explanation-color;
+        border-bottom: 1px solid $explanation-color;
+      }
+    }
+  }
+
+  &__container {
+    padding-left: 0;
+    @media (min-width: 946px) {
+      padding-left: 7%;
+      margin-left: -35px;
+      margin-right: 15.8%;
+    }
+  }
+
+  &__lists {
+    justify-content: space-around;
+    margin-bottom: 80px;
+    display: none;
+    @media (min-width: 810px) {
+      display: flex;
+    }
+    @media (min-width: 946px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__list-title {
+    font-size: 1.5rem;
+    line-height: 24px;
+  }
+
+  &__list-item {
+    line-height: 35px;
+  }
+
+  &__made-in {
+    display: block;
+    margin-bottom: 10px;
+    color: $explanation-color;
+  }
 }

@@ -1,5 +1,5 @@
 .requests {
-  padding-bottom: 120px;
+  padding-bottom: 106px;
   border-bottom: 2px solid #f2f2f2;
   h2 {
     font-size: 3.3333rem;
@@ -27,6 +27,10 @@
     padding: 7px;
     background-color: #ffe6de;
     border-radius: 3px;
+  }
+
+  &__table-wrap {
+    overflow-x: auto;
   }
 
   table {
