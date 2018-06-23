@@ -15,7 +15,7 @@ $slick-dot-color: black !default;
 $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
-$slick-dot-character: "\2022" !default;
+$slick-dot-character: "" !default;
 $slick-dot-size: 6px !default;
 $slick-opacity-default: 0.75 !default;
 $slick-opacity-on-hover: 1 !default;
@@ -65,7 +65,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: 25px;
+    left: 12px;
     width: 45px;
     height: 45px;
     border: 1px solid #a1a1a1;
@@ -74,7 +74,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: 25px;
+    right: 12px;
     width: 45px;
     height: 45px;
     border: 1px solid #a1a1a1;
@@ -119,30 +119,37 @@ $slick-opacity-not-active: 0.25 !default;
             cursor: pointer;
             &:hover, &:focus {
                 outline: none;
-                &:before {
-                    opacity: $slick-opacity-on-hover;
+                &:after {
+                    position: absolute;
+                    top: -32px;
+                    left: 14px;
+                    content: $slick-dot-character;
+                    width: 9px;
+                    height: 10px;
+                    background-color: #fff;
+                    border-radius: 50%;
                 }
             }
             &:before {
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: -36px;
+                left: -1;
                 content: $slick-dot-character;
-                width: 20px;
-                height: 20px;
-                font-family: $slick-font-family;
-                font-size: $slick-dot-size;
-                line-height: 20px;
-                text-align: center;
-                color: $slick-dot-color;
-                opacity: $slick-opacity-not-active;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                width: 15px;
+                height: 16px;
+                border: 1px solid white;
+                border-radius: 50%;
             }
         }
-        &.slick-active button:before {
-            color: $slick-dot-color-active;
-            opacity: $slick-opacity-default;
+        &.slick-active button:after {
+            position: absolute;
+            top: -32px;
+            left: 14px;
+            content: $slick-dot-character;
+            width: 9px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
         }
     }
 }

@@ -36,7 +36,7 @@
         <ul>
           <li><button class="header__search"><img src="img/magnifier.jpg" alt="magnifier"></button></li>
           <li><a href="#" class="header__user-profile"><img src="img/user.jpg" alt="user"></a></li>
-          <li><a href="#" class="header__drib"><img src="img/drib.jpg" alt="drib"></a></li>
+          <li><a href="#" class="header__drib"><img src="img/drib.jpg" alt="drib"><span class="header__drib-amount">150</span></a></li>
           <li><a href="#" class="header__notice"><img src="img/bell.jpg" alt="bell"></a><span class="header__notice-amount">+20</span></li>
         </ul>
       </div>
@@ -79,44 +79,44 @@
         <div class="description__slides-wrap">
           <div class="description__slider">
             <div>
-              <div class="description__slide-wrap">
-                <img src="img/slide.jpg" alt="slide">
+              <div class="description__slide-wrap description__slide1">
                 <div class="description__slider-text">
                   <a href="#"><span>Применение технологий
                   искусственного интеллекта
                   в нефтегазовой области</span></a>
-                  <p>Из курса вы узнаете о возможностях раздела "Обучение
+                  <p class="description__text-desktop">Из курса вы узнаете о возможностях раздела "Обучение
                     и развитие", о том, что поможет в развитии собственных
                     компетенций и о дополнительных возможностях в рамках
                     обучения на портале.</p>
+                  <p class="description__text-mobile">Вы узнаете, что такое машинное обучение, как применить его в работе и где учиться, чтобы начать заниматься такими проектами</p>
                 </div>
               </div>
             </div>
             <div>
-              <div class="description__slide-wrap">
-                <img src="img/slide.jpg" alt="slide">
+              <div class="description__slide-wrap description__slide2">
                 <div class="description__slider-text">
                   <a href="#"><span>Применение технологий
                   искусственного интеллекта
                   в нефтегазовой области</span></a>
-                  <p>Из курса вы узнаете о возможностях раздела "Обучение
+                  <p class="description__text-desktop">Из курса вы узнаете о возможностях раздела "Обучение
                     и развитие", о том, что поможет в развитии собственных
                     компетенций и о дополнительных возможностях в рамках
                     обучения на портале.</p>
+                  <p class="description__text-mobile">Вы узнаете, что такое машинное обучение, как применить его в работе и где учиться, чтобы начать заниматься такими проектами</p>
                 </div>
               </div>
             </div>
             <div>
-              <div class="description__slide-wrap">
-                <img src="img/slide.jpg" alt="slide">
+              <div class="description__slide-wrap description__slide3">
                 <div class="description__slider-text">
                   <a href="#"><span>Применение технологий
                   искусственного интеллекта
                   в нефтегазовой области</span></a>
-                  <p>Из курса вы узнаете о возможностях раздела "Обучение
+                  <p class="description__text-desktop">Из курса вы узнаете о возможностях раздела "Обучение
                     и развитие", о том, что поможет в развитии собственных
                     компетенций и о дополнительных возможностях в рамках
                     обучения на портале.</p>
+                  <p class="description__text-mobile">Вы узнаете, что такое машинное обучение, как применить его в работе и где учиться, чтобы начать заниматься такими проектами</p>
                 </div>
               </div>
             </div>
@@ -152,7 +152,7 @@
   <section class="participants">
     <div class="container">
       <h2>Участники</h2>
-      <div class="participants__sort-filters">
+      <div class="participants__sort-filters wrap">
         <button>По алфавиту</button>
         <button>По популярности</button>
         <button>Эксперты</button>
@@ -505,71 +505,79 @@
         <li class="requests__tab-nav">Основные сведения</li>
         <li class="requests__tab-nav requests__tab-nav--active">История согласования</li>
       </ul>
+    </div>
       <div class="requests__table-wrap">
-        <table>
-          <tr>
-            <th>Подразделение</th>
-            <th>Функция</th>
-            <th>Инициатор заявки</th>
-            <th>Должность</th>
-            <th>Дата заявки</th>
-            <th>Программа обучения</th>
-            <th>Должность</th>
-            <th>Статус заявки</th>
-          </tr>
-          <tr>
-            <td>Лаборатория мультимедиа</td>
-            <td>Современные технологии
-              добычи нефти</td>
-            <td>Рыжкова Елена
-              Александровна</td>
-            <td>Аналитик смененная
-              должность</td>
-            <td>12.04.2017</td>
-            <td>Организацияи управление
+          <div class="requests__table-string">
+            <div class="requests__table-string-wrap requests__table-border">
+              <p>Подразделение</p>
+              <p>Функция</p>
+              <p>Инициатор заявки</p>
+              <p>Должность</p>
+              <p>Дата заявки</p>
+              <p>Программа обучения</p>
+              <p>Стоимость</p>
+              <p>Статус заявки</p>
+            </div>
+          </div>
+        <div class="requests__table-string">
+          <div class="requests__table-string-wrap">
+            <p>Лаборатория мультимедиа</p>
+            <p>Современные технологии
+              добычи нефти</p>
+            <p>Рыжкова Елена
+              Александровна</p>
+            <p>Аналитик смененная
+              должность</p>
+            <p>12.04.2017</p>
+            <p>Организацияи управление
               инженерными изысканиями
               Организацияи управление
               инженерными изысканиями
-            </td>
-            <td>200 руб.</td>
-            <td>Согласование линейным руководителем</td>
-          </tr>
-          <tr>
-            <td>Лаборатория мультимедиа</td>
-            <td>Современные технологии
-              добычи нефти</td>
-            <td>Рыжкова Елена
-              Александровна</td>
-            <td>Аналитик смененная
-              должность</td>
-            <td>12.04.2017</td>
-            <td>Организацияи управление
+            </p>
+            <p>200 руб.</p>
+            <p>Согласование линейным руководителем</p>
+          </div>
+          </div>
+        <div class="requests__table-string">
+          <div class="requests__table-string-wrap">
+            <p>Лаборатория мультимедиа</p>
+            <p>Современные технологии
+              добычи нефти</p>
+            <p>Рыжкова Елена
+              Александровна</p>
+            <p>Аналитик смененная
+              должность</p>
+            <p>12.04.2017</p>
+            <p>Организацияи управление
               инженерными изысканиями
               Организацияи управление
               инженерными изысканиями
-            </td>
-            <td>200 руб.</td>
-            <td>Согласование линейным руководителем</td>
-          </tr>
-          <tr>
-            <td>Лаборатория мультимедиа</td>
-            <td>Современные технологии
-              добычи нефти</td>
-            <td>Рыжкова Елена
-              Александровна</td>
-            <td>Аналитик смененная
-              должность</td>
-            <td>12.04.2017</td>
-            <td>Организацияи управление
+            </p>
+            <p>200 руб.</p>
+            <p>Согласование линейным руководителем</p>
+          </div>
+          </div>
+        <div class="requests__table-string">
+          <div class="requests__table-string-wrap">
+            <p>Лаборатория мультимедиа</p>
+            <p>Современные технологии
+              добычи нефти</p>
+            <p>Рыжкова Елена
+              Александровна</p >
+            <p>Аналитик смененная
+              должность</p >
+            <p>12.04.2017</p >
+            <p>Организацияи управление
               инженерными изысканиями
               Организацияи управление
               инженерными изысканиями
-            </td>
-            <td>200 руб.</td>
-            <td>Согласование линейным руководителем</td>
-          </tr>
-        </table>
+            </p>
+            <p>200 руб.</p >
+            <p>Согласование линейным руководителем</p>
+          </div>
+          </div>
       </div>
+    <div class="container">
       <div class="requests__pagination">
         <ul>
           <li><a class="requests__pagination-item requests__pagination-item--active" href="#">1</a></li>

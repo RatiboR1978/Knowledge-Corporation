@@ -1,13 +1,28 @@
 .participants {
-  margin-bottom: 91px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #f2f2f2;
+  @media (min-width: 810px) {
+    border: none;
+  }
 
   h2 {
-    font-size: 3.3333rem;
-    margin-bottom: 39px;
+    font-size: 2.333rem;
+    margin-bottom: 35px;
+    @media (min-width: 810px) {
+      font-size: 3.3333rem;
+      margin-bottom: 39px;
+    }
   }
 
   &__sort-filters {
+    justify-content: flex-start;
+    flex-wrap: wrap;
     margin-bottom: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    @media (min-width: 810px) {
+      flex-direction: row;
+    }
     button {
       padding: 0;
       background: none;
@@ -18,7 +33,7 @@
       margin-right: 29px;
       cursor: pointer;
       font-size: 1.166rem;
-      margin-bottom: 7px;
+      margin-bottom: 15px;
     }
 
     button:last-child {
@@ -114,6 +129,7 @@
   &__block-but {
     max-width: 224px;
     font-size: 18px;
+    margin-bottom: 61px;
     button {
       padding: 14px 39px;
       border-radius: 30px;

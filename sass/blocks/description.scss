@@ -1,6 +1,10 @@
 .description {
   padding-top: 45px;
-  margin-bottom: 93px;
+  margin-bottom: 38px;
+  border-bottom: 2px solid #f2f2f2;
+  @media (min-width: 810px) {
+    border: none;
+  }
 
   &__information {
     flex-wrap: wrap;
@@ -88,6 +92,7 @@
   &__edit {
     padding-left: 33px;
     padding-top: 29px;
+    margin-bottom: 55px;
     a {
       color: $accent-color;
       font-size: 1.16rem;
@@ -116,11 +121,8 @@
 
   &__slider {
     max-width: 280px;
-    @media (min-width: 570px) {
-      max-width: 506px;
-    }
-    @media (min-width: 680px) {
-      max-width: 606px;
+    @media (min-width: 810px) {
+      max-width: 600px;
     }
   }
 
@@ -129,16 +131,21 @@
   }
 
   &__slider-text {
-    max-width: 420px;
     position: absolute;
     top: 30px;
-    left: 100px;
+    left: 16px;
+    @media (min-width: 810px) {
+      left: 100px;
+    }
     a {
+      display: block;
       font-family: DINPro-Bold, Arial, sans-serif;
       font-size: 1.5rem;
       color: white;
       line-height: 25px;
-      @media (min-width: 680px) {
+      max-width: 238px;
+      @media (min-width: 810px) {
+        max-width: 420px;
         line-height: 36px;
         font-size: 2rem;
       }
@@ -148,18 +155,47 @@
     }
 
     p {
-      max-width: 300px;
+      max-width: 238px;
       font-size: 1.2rem;
       color: white;
       line-height: 25px;
-      @media (min-width: 680px) {
+      @media (min-width: 810px) {
+        max-width: 435px;
         line-height: 25px;
         font-size: 1.4rem;
       }
     }
   }
 
+  &__slide1,
+  &__slide2,
+  &__slide3 {
+    width: 280px;
+    height: 300px;
+    background-image: url(../img/slide2.jpg);
+    @media (min-width: 810px) {
+      width: 606px;
+      height: 300px;
+      background-image: url(../img/slide.jpg);
+    }
+  }
+
+  &__text-desktop {
+    display: none;
+    @media (min-width: 810px) {
+      display: block;
+    }
+  }
+
+  &__text-mobile {
+    display: block;
+    @media (min-width: 810px) {
+      display: none;
+    }
+  }
+
   &__links {
     max-width: 755px;
+    padding-right: 20px;
   }
 }

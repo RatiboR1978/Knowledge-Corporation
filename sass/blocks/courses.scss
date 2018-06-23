@@ -1,9 +1,17 @@
 .courses {
-  margin-bottom: 106px;
+  margin-bottom: 66px;
+  border-bottom: 2px solid #f2f2f2;
+  @media (min-width: 810px) {
+    border: none;
+  }
 
   h2 {
-    font-size: 3.3333rem;
     margin-bottom: 52px;
+    font-size: 2.333rem;
+    @media (min-width: 810px) {
+      font-size: 3.3333rem;
+      margin-bottom: 52px;
+    }
   }
 
   &__list {
@@ -93,10 +101,13 @@
   }
 
   &__but {
+    display: block;
+    width: 124px;
     font-size: 1.5rem;
     color: $accent-color;
     border: 1px solid $accent-color;
     border-radius: 28px;
     padding: 12px 40px;
+    margin-bottom: 40px;
   }
 }
