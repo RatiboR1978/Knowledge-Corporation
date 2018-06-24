@@ -46,3 +46,11 @@ h4 {
   display: flex;
   justify-content: center;
 }
+
+.box {
+  display: block;
+  vertical-align: top;
+  @media (min-width: 810px) {
+    display: inline-block;
+  }
+}
