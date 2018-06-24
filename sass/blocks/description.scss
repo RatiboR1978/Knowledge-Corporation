@@ -118,10 +118,12 @@
   }
 
   &__slides-wrap {
-    @media (min-width: 1280px) {
-      margin-top: 158px;
+    @media (min-width: 810px) {
       margin-left: 11%;
       margin-right: 2%;
+    }
+    @media (min-width: 1280px) {
+      margin-top: 158px;
     }
   }
 

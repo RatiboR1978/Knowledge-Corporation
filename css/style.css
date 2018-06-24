@@ -926,11 +926,13 @@ h4 {
       left: -32px; }
     .description__edit a:hover:before {
       background: url(../img/editAll.png); }
-  @media (min-width: 1280px) {
+  @media (min-width: 810px) {
     .description__slides-wrap {
-      margin-top: 158px;
       margin-left: 11%;
       margin-right: 2%; } }
+  @media (min-width: 1280px) {
+    .description__slides-wrap {
+      margin-top: 158px; } }
   .description__slider {
     max-width: 280px; }
     @media (min-width: 810px) {
@@ -1115,7 +1117,7 @@ h4 {
       margin-top: 0;
       margin-bottom: 15px;
       display: inline-block;
-      max-width: 187px;
+      max-width: 189px;
       min-height: 32px;
       line-height: 19px; }
       .participants__item-text h3 a {
