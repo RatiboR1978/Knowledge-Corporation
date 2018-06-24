@@ -37,7 +37,6 @@ $(function () {
     ========================*/
 
     $('.requests__tab-nav').on('click', function() {
-        alert(123)
         $('.requests__tab-nav').removeClass('requests__tab-nav--active');
         $('.requests__table-wrap').removeClass('requests__active');
         $(this).addClass('requests__tab-nav--active');
