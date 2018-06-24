@@ -402,7 +402,8 @@ html {
 
 body {
   position: relative;
-  font-family: DINPro, Arial, sans-serif; }
+  font-family: DINPro, Arial, sans-serif;
+  background-color: #f4f4f4; }
 
 a {
   text-decoration: none; }
@@ -413,6 +414,11 @@ img {
 
 h4 {
   font-family: DINPro-Bold,  Arial, sans-serif; }
+
+.container-page {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #fff; }
 
 .container {
   max-width: 1784px;
@@ -557,19 +563,23 @@ h4 {
           border-radius: 50%;
   background: url(../img/arrowR.png) no-repeat 56%; }
 
+.slick-prev:hover,
+.slick-next:hover {
+  border: 1px solid white; }
+
 /* Dots */
 .slick-dotted.slick-slider {
   margin-bottom: 30px; }
 
 .slick-dots {
   position: absolute;
-  bottom: -25px;
   list-style: none;
   display: block;
   text-align: center;
   padding: 0;
   margin: 0;
-  width: 100%; }
+  width: 100%;
+  bottom: 10px; }
   .slick-dots li {
     position: relative;
     display: inline-block;
@@ -580,10 +590,10 @@ h4 {
     cursor: pointer; }
     .slick-dots li button {
       border: 0;
-      background: transparent;
       display: block;
-      height: 20px;
-      width: 20px;
+      width: 15px;
+      height: 15px;
+      background: url("../img/dotsAll.png") no-repeat 100%;
       outline: none;
       line-height: 0px;
       font-size: 0px;
@@ -591,37 +601,14 @@ h4 {
       padding: 5px;
       cursor: pointer; }
       .slick-dots li button:hover, .slick-dots li button:focus {
-        outline: none; }
-        .slick-dots li button:hover:after, .slick-dots li button:focus:after {
-          position: absolute;
-          top: -32px;
-          left: 14px;
-          content: "";
-          width: 9px;
-          height: 10px;
-          background-color: #fff;
-          -webkit-border-radius: 50%;
-                  border-radius: 50%; }
-      .slick-dots li button:before {
-        position: absolute;
-        top: -36px;
-        left: -1;
-        content: "";
+        outline: none;
         width: 15px;
-        height: 16px;
-        border: 1px solid white;
-        -webkit-border-radius: 50%;
-                border-radius: 50%; }
-    .slick-dots li.slick-active button:after {
-      position: absolute;
-      top: -32px;
-      left: 14px;
-      content: "";
-      width: 9px;
-      height: 10px;
-      background-color: #fff;
-      -webkit-border-radius: 50%;
-              border-radius: 50%; }
+        height: 15px;
+        background: url("../img/dotsAll.png") no-repeat; }
+    .slick-dots li.slick-active button {
+      width: 15px;
+      height: 15px;
+      background: url("../img/dotsAll.png") no-repeat; }
 
 .header {
   border-bottom: 2px solid #f2f2f2; }
@@ -725,6 +712,7 @@ h4 {
       .header__user-profile {
         display: block; } }
   .header__drib {
+    color: black;
     position: relative;
     display: block;
     width: 19px; }
@@ -890,6 +878,8 @@ h4 {
       margin-bottom: 10px; }
     .description__tagcloud a:last-child {
       margin-right: 0; }
+    .description__tagcloud a:hover {
+      color: #fd5520; }
   .description__classifiers h4, .description__competencies h4 {
     margin-bottom: 6px; }
   .description__classifiers a, .description__competencies a {
@@ -927,6 +917,8 @@ h4 {
       height: 19px;
       top: 0;
       left: -32px; }
+    .description__edit a:hover:before {
+      background: url(../img/editAll.png); }
   @media (min-width: 1280px) {
     .description__slides-wrap {
       margin-top: 158px;
@@ -1102,6 +1094,14 @@ h4 {
     max-width: 207px; }
     .participants__item-text h3 {
       margin-top: 0; }
+  .participants__item-mob {
+    display: none; }
+    @media (min-width: 810px) {
+      .participants__item-mob {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
   .participants__item-but {
     padding: 6px 20px;
     border: 1px solid #fd5520;
@@ -1112,7 +1112,13 @@ h4 {
             border-radius: 16px;
     font-family: DINPro-Bold, Arial, sans-serif;
     font-size: 1.16rem;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+  .participants__item-but:hover {
+    background-color: #fd5520;
+    color: white; }
   .participants__position-links a {
     color: #fd5520;
     position: relative; }
@@ -1133,7 +1139,19 @@ h4 {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-bottom: 14px; }
+    margin-bottom: 14px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media (min-width: 810px) {
+      .participants__list {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
   .participants__item-photo-gag {
     width: 75px;
     height: 75px;
@@ -1163,10 +1181,21 @@ h4 {
   .participants__registration {
     background-color: #fd5520;
     color: white;
-    margin-bottom: 38px; }
+    margin-bottom: 38px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+  .participants__registration:hover {
+    background-color: #ff845b; }
   .participants__show {
     background-color: white;
-    color: #fd5520; }
+    color: #fd5520;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+  .participants__show:hover {
+    background-color: #fd5520;
+    color: white; }
 
 .courses {
   margin-bottom: 66px;
@@ -1189,7 +1218,7 @@ h4 {
     max-width: 750px;
     -webkit-box-shadow: 0 1px 10px 2px #dddddd;
             box-shadow: 0 1px 10px 2px #dddddd;
-    padding: 28px 0 22px 30px;
+    padding: 28px 35px 22px 25px;
     margin-bottom: 20px; }
     .courses__item h3 {
       margin-top: 7px;
@@ -1199,6 +1228,8 @@ h4 {
       line-height: 23px; }
       .courses__item h3 a {
         color: black; }
+      .courses__item h3 a:hover {
+        color: #fd5520; }
       .courses__item h3 span {
         border-bottom: 1px solid; }
   .courses__links a {
@@ -1212,9 +1243,23 @@ h4 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media (min-width: 460px) {
+      .courses__statistics {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
     .courses__statistics p {
-      padding-right: 24px;
+      margin: 0;
+      margin-top: 10px;
+      padding-right: 20px;
       font-size: 1.1666rem; }
   .courses__heart {
     cursor: pointer;
@@ -1227,7 +1272,7 @@ h4 {
     top: 0;
     left: 0; }
   .courses__like {
-    padding-left: 20px;
+    padding-left: 28px;
     position: relative; }
   .courses__triangle {
     position: absolute;
@@ -1256,7 +1301,13 @@ h4 {
     -webkit-border-radius: 28px;
             border-radius: 28px;
     padding: 12px 40px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+  .courses__but:hover {
+    background-color: #fd5520;
+    color: white; }
 
 .requests {
   padding-bottom: 106px;
@@ -1286,45 +1337,48 @@ h4 {
     background-color: #ffe6de;
     -webkit-border-radius: 3px;
             border-radius: 3px; }
-  .requests__table-wrap {
+  .requests__table-container {
     overflow-x: auto; }
+  .requests__table-wrap {
+    display: none;
+    width: 100%;
+    border-collapse: collapse; }
+    .requests__table-wrap td {
+      max-width: 284px; }
+      @media (min-width: 945px) {
+        .requests__table-wrap td {
+          max-width: 160px; } }
+  .requests__active {
+    display: block; }
+  .requests__item {
+    padding: 10px 10px 10px 0;
+    vertical-align: top; }
+  .requests__td-first {
+    width: 5%;
+    padding-left: 10px; }
+    @media (min-width: 700px) {
+      .requests__td-first {
+        padding: 10px 10px 10px 0; } }
+    @media (min-width: 945px) {
+      .requests__td-first {
+        width: 7%; } }
+  .requests__td-last {
+    width: 3%; }
+    @media (min-width: 1400px) {
+      .requests__td-last {
+        width: 15%; } }
+    @media (min-width: 1600px) {
+      .requests__td-last {
+        width: 20%; } }
+    @media (min-width: 1700px) {
+      .requests__td-last {
+        width: 30%; } }
   .requests__table-string:hover {
     background-color: rgba(253, 85, 32, 0.1); }
-  .requests__table-string-wrap {
-    width: 1100px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 5%; }
-    @media (min-width: 1125px) {
-      .requests__table-string-wrap {
-        width: 1000px; } }
-    @media (min-width: 1320px) {
-      .requests__table-string-wrap {
-        width: 1187px; } }
-    @media (min-width: 1520px) {
-      .requests__table-string-wrap {
-        width: 1361px; } }
   .requests__table-border {
-    border-bottom: 1px solid; }
-  .requests__table-string p {
-    font-size: 12px;
-    min-width: 128px;
-    max-width: 200px;
-    margin-right: 10px; }
-    @media (min-width: 945px) {
-      .requests__table-string p {
-        min-width: 98px; } }
-    @media (min-width: 1125px) {
-      .requests__table-string p {
-        min-width: 120px; } }
-    @media (min-width: 1320px) {
-      .requests__table-string p {
-        min-width: 140px; } }
-    @media (min-width: 1520px) {
-      .requests__table-string p {
-        min-width: 165px; } }
+    border-bottom: 1px solid #cecece; }
+  .requests__table-string:first-child:hover {
+    background-color: white; }
   .requests__pagination {
     padding-top: 16px; }
     .requests__pagination ul {
@@ -1332,9 +1386,14 @@ h4 {
       .requests__pagination ul li {
         display: inline-block;
         font-size: 1.5rem;
-        margin-right: 17px; }
+        margin-right: 8px; }
+        @media (min-width: 810px) {
+          .requests__pagination ul li {
+            margin-right: 17px; } }
   .requests__pagination-item {
     color: #fd5520; }
+  .requests__pagination-item:hover {
+    color: black; }
   .requests__pagination-item--active {
     color: black; }
   .requests__dots {
@@ -1385,5 +1444,5 @@ h4 {
     line-height: 35px; }
   .footer__made-in {
     display: block;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     color: #666666; }

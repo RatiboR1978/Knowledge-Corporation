@@ -57,6 +57,9 @@
     a:last-child {
       margin-right: 0;
     }
+    a:hover {
+      color: $accent-color;
+    }
   }
 
   &__classifiers,
@@ -108,6 +111,9 @@
       height: 19px;
       top: 0;
       left: -32px;
+    }
+    a:hover:before {
+      background: url(../img/editAll.png);
     }
   }
 

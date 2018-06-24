@@ -72,6 +72,13 @@
     }
   }
 
+  &__item-mob {
+    display: none;
+    @media (min-width: 810px) {
+      display: flex;
+    }
+  }
+
   &__item-but {
     padding: 6px 20px;
     border: 1px solid $accent-color;
@@ -82,6 +89,12 @@
     font-family: DINPro-Bold, Arial, sans-serif;
     font-size: 1.16rem;
     cursor: pointer;
+    transition: all .5s;
+  }
+
+  &__item-but:hover {
+    background-color: $accent-color;
+    color: white;
   }
 
   &__position-links {
@@ -106,6 +119,10 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 14px;
+    flex-direction: column;
+    @media (min-width: 810px) {
+      flex-direction: row;
+    }
   }
 
   &__item-photo-gag {
@@ -143,10 +160,21 @@
     background-color: $accent-color;
     color: white;
     margin-bottom: 38px;
+    transition: all .5s;
+  }
+
+  &__registration:hover {
+    background-color: #ff845b;
   }
 
   &__show {
     background-color: white;
     color: $accent-color;
+    transition: all .5s;
+  }
+
+  &__show:hover {
+    background-color: $accent-color;
+    color: white;
   }
 }

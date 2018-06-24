@@ -34,58 +34,70 @@
     border-radius: 3px;
   }
 
-  &__table-wrap {
+  &__table-container {
     overflow-x: auto;
-    @media (min-width: 945px) {
+    @media (min-width: 810px) {
 
     }
   }
 
-  &__table-string {
-    //min-width: 1520px;
+  &__table-wrap {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    td {
+      max-width: 284px;
+      @media (min-width: 945px) {
+        max-width: 160px;
+      }
+    }
+  }
+
+  &__active {
+    display: block;
+  }
+
+  &__item {
+    padding: 10px 10px 10px 0;
+    vertical-align: top;
+  }
+
+  &__td-first {
+    width: 5%;
+    padding-left: 10px;
+    @media (min-width: 700px) {
+      padding: 10px 10px 10px 0;
+    }
+    @media (min-width: 945px) {
+      width: 7%;
+    }
+  }
+
+  &__td-last {
+    width: 3%;
+    @media (min-width: 1400px) {
+      width: 15%;
+    }
+    @media (min-width: 1600px) {
+      width: 20%;
+    }
+    @media (min-width: 1700px) {
+      width: 30%;
+    }
   }
 
   &__table-string:hover {
     background-color: rgba(253, 85, 32, .1);
   }
 
-  &__table-string-wrap {
-    width: 1100px;
-    display: flex;
-    margin-left: 5%;
-    @media (min-width: 1125px) {
-      width: 1000px;
-    }
-    @media (min-width: 1320px) {
-      width: 1187px;
-    }
-    @media (min-width: 1520px) {
-      width: 1361px;
-    }
-  }
-
   &__table-border {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #cecece;
   }
 
-  &__table-string p {
-    font-size: 12px;
-    min-width: 128px;
-    max-width: 200px;
-    margin-right: 10px;
-    @media (min-width: 945px) {
-      min-width: 98px;
-    }
-    @media (min-width: 1125px) {
-      min-width: 120px;
-    }
-    @media (min-width: 1320px) {
-      min-width: 140px;
-    }
-    @media (min-width: 1520px) {
-      min-width: 165px;
-    }
+  &__table-string:first-child:hover {
+    background-color: white;
   }
+
 
   &__pagination {
     padding-top: 16px;
@@ -94,13 +106,20 @@
       li {
         display: inline-block;
         font-size: 1.5rem;
-        margin-right: 17px;
+        margin-right: 8px;
+        @media (min-width: 810px) {
+          margin-right: 17px;
+        }
       }
     }
   }
 
   &__pagination-item {
     color: $accent-color;
+  }
+
+  &__pagination-item:hover {
+    color: black;
   }
 
   &__pagination-item--active {
